@@ -25,17 +25,35 @@ rails g scaffold Motor tipo name description photo
 
 7.- Crear Scaffolding para :Mantenimiento
 rails g scaffold Maintenance tipo name city materials fecha:date operatorname motor:references
+
 8.-Correr migración.
 rails db:migrate
+
 9.-  Realizar segundo commit.
+git add .
+git commit -m "scaffold ok"
+
 10.-Observar el resultado 
 rails s -b 0
 
+11.-Agregar cdn boostrap al proyecto en application.html.erb
 
-11.- Agregar Roles:
+12.- Modificar la vista de mantenciones en index agregar tabla y modificar la vista parcial de mantenimiento
+  
+13.- Agregar navbar 
+
+14.- Modificar routes.rb para la vista de mantenimiento como index
+
+15.- Agregar Roles:
+    administrador@correo.cl clave 123456
+    operador1@gmail.com  clave: 123456
 rails g migration AddRoleToUsers role:integer
 modificar : /_add_role_to_users.rb
 rails db:migrate
+modificamos user.rb con enum role
+en 1 : usuario normal
+en 2: usuario administrador
+En rails c hacemos la configuración asignando un rol a un id
 
-
-12.- 
+16.- Agregar las restriciiones a usuario normal
+configurar application_controller , mantenimiento_controler y motors_controller

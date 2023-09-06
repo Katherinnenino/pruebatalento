@@ -1,37 +1,24 @@
 <div id="<%= dom_id maintenance %>">
-  <p>
-    <strong>Tipo:</strong>
+      <th scope="row">
+      <%= maintenance.motor_id %>
+      </th>
+      <th scope="row">
     <%= maintenance.tipo %>
-  </p>
-
-  <p>
-    <strong>Name:</strong>
+      </th>
+      <th scope="row">
     <%= maintenance.name %>
-  </p>
-
-  <p>
-    <strong>City:</strong>
+      </th>
+      <th scope="row">
     <%= maintenance.city %>
-  </p>
+      </th>
+      <th scope="row">
+        <%= maintenance.materials %>
+      </th>
+      <th scope="row">
+      <%= maintenance.fecha %>
+      </th>
+      <th scope="row">
+      <%= maintenance.operatorname %>
+      </th>
 
-  <p>
-    <strong>Materials:</strong>
-    <%= maintenance.materials %>
-  </p>
-
-  <p>
-    <strong>Fecha:</strong>
-    <%= maintenance.fecha %>
-  </p>
-
-  <p>
-    <strong>Operatorname:</strong>
-    <%= maintenance.operatorname %>
-  </p>
-
-  <p>
-    <strong>Motor:</strong>
-    <%= maintenance.motor_id %>
-  </p>
-
-</div>
+</div>      

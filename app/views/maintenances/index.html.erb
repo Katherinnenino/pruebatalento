@@ -1,14 +1,30 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Maintenances</h1>
-
-<div id="maintenances">
-  <% @maintenances.each do |maintenance| %>
-    <%= render maintenance %>
-    <p>
-      <%= link_to "Show this maintenance", maintenance %>
-    </p>
-  <% end %>
-</div>
-
+<h1>Mantenimiento</h1>
 <%= link_to "New maintenance", new_maintenance_path %>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id_motor</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Ciudad</th>
+      <th scope="col">Materiales</th>
+      <th scope="col">fecha</th>
+      <th scope="col">Nombre del tecnico</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @maintenances.each do |maintenance| %>
+  <tr>  
+  <%= render maintenance %>
+  <td>
+  <%= link_to "Mostrar detalles", maintenance %>
+  </td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>

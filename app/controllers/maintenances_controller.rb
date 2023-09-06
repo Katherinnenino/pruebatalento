@@ -1,6 +1,11 @@
 class MaintenancesController < ApplicationController
   before_action :set_maintenance, only: %i[ show edit update destroy ]
-
+  before_action only: [:new, :create ] do
+    authorize_request(["normal_user", "admin"])
+    end
+    before_action only: [ :destroy, :edit] do
+      authorize_request(["admin"])
+    end
   # GET /maintenances or /maintenances.json
   def index
     @maintenances = Maintenance.all

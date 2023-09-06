@@ -1,6 +1,11 @@
 class MotorsController < ApplicationController
   before_action :set_motor, only: %i[ show edit update destroy ]
-
+  before_action only: [:new, :create ] do
+    authorize_request(["normal_user", "admin"])
+    end
+    before_action only: [ :destroy, :edit] do
+      authorize_request(["admin"])
+    end
   # GET /motors or /motors.json
   def index
     @motors = Motor.all
