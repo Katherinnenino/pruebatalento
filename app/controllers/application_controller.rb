@@ -4,5 +4,6 @@ class ApplicationController < ActionController::Base
         redirect_to posts_path, notice: "You are not authorized to perform this action"
         end
     end
-        
+    Pagy::DEFAULT[:items] = 5
+    include Pagy::Backend  
 end

@@ -51,9 +51,20 @@ rails g migration AddRoleToUsers role:integer
 modificar : /_add_role_to_users.rb
 rails db:migrate
 modificamos user.rb con enum role
-en 1 : usuario normal
-en 2: usuario administrador
+en 1 : usuario normal sólo crear
+en 2: usuario administrador crear, editar, borrar, mostar, subir
 En rails c hacemos la configuración asignando un rol a un id
 
 16.- Agregar las restriciiones a usuario normal
 configurar application_controller , mantenimiento_controler y motors_controller
+
+18.- Cambiar a español las palabras de las vistas de usuario, motor y mantenimiento.
+
+Pendiente:
+agregar a mantenimiento el id del usuario que esta ejecutando el registro...
+filtrar el show por id motor
+
+GEMA FAKER PARA COMPLETAR DATOS de las tablas
+
+
+me falto mucho tiempo, y eso que dormí con suerte tres horas :C

@@ -8,8 +8,10 @@ class MaintenancesController < ApplicationController
     end
   # GET /maintenances or /maintenances.json
   def index
-    @maintenances = Maintenance.all
+    @maintenances = Maintenance.all 
+    @pagy, @maintenances = pagy(@maintenances)
   end
+
 
   # GET /maintenances/1 or /maintenances/1.json
   def show

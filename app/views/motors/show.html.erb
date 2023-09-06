@@ -3,8 +3,8 @@
 <%= render @motor %>
 
 <div>
-  <%= link_to "Edit this motor", edit_motor_path(@motor) %> |
-  <%= link_to "Back to motors", motors_path %>
+  <%= link_to "Editar", edit_motor_path(@motor) %> |
+  <%= link_to "Regresar", motors_path %>
 
-  <%= button_to "Destroy this motor", @motor, method: :delete %>
+  <%= button_to "Borrar", @motor, method: :delete %>
 </div>

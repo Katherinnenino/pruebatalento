@@ -1,7 +1,7 @@
 <%= form_with(model: maintenance) do |form| %>
   <% if maintenance.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(maintenance.errors.count, "error") %> prohibited this maintenance from being saved:</h2>
+      <h2><%= pluralize(maintenance.errors.count, "error") %>prohibido guardar este mantenimiento:</h2>
 
       <ul>
         <% maintenance.errors.each do |error| %>
@@ -12,37 +12,37 @@
   <% end %>
 
   <div>
-    <%= form.label :tipo, style: "display: block" %>
+    <%= form.label :tipo, style: "bloqueo de pantalla" %>
     <%= form.text_field :tipo %>
   </div>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
+    <%= form.label :name, style: "bloqueo de pantalla" %>
     <%= form.text_field :name %>
   </div>
 
   <div>
-    <%= form.label :city, style: "display: block" %>
+    <%= form.label :city, style: "bloqueo de pantalla" %>
     <%= form.text_field :city %>
   </div>
 
   <div>
-    <%= form.label :materials, style: "display: block" %>
+    <%= form.label :materials, style: "bloqueo de pantalla" %>
     <%= form.text_field :materials %>
   </div>
 
   <div>
-    <%= form.label :fecha, style: "display: block" %>
+    <%= form.label :fecha, style: "bloqueo de pantalla" %>
     <%= form.date_field :fecha %>
   </div>
 
   <div>
-    <%= form.label :operatorname, style: "display: block" %>
+    <%= form.label :operatorname, style: "bloqueo de pantalla" %>
     <%= form.text_field :operatorname %>
   </div>
 
   <div>
-    <%= form.label :motor_id, style: "display: block" %>
+    <%= form.label :motor_id, style: "bloqueo de pantalla" %>
     <%= form.text_field :motor_id %>
   </div>
 

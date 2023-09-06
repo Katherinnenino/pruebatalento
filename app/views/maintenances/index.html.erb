@@ -1,7 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Mantenimiento</h1>
-<%= link_to "New maintenance", new_maintenance_path %>
+<%= link_to "Nuevo Mantenimiento ", new_maintenance_path %>
+<br>
+ <%= link_to "Ingresar un nuevo motor", motors_path %>
 
 
 <table class="table">
@@ -12,8 +14,8 @@
       <th scope="col">Nombre</th>
       <th scope="col">Ciudad</th>
       <th scope="col">Materiales</th>
-      <th scope="col">fecha</th>
-      <th scope="col">Nombre del tecnico</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Nombre del técnico</th>
       <th scope="col">Acciones</th>
     </tr>
   </thead>
@@ -22,9 +24,11 @@
   <tr>  
   <%= render maintenance %>
   <td>
-  <%= link_to "Mostrar detalles", maintenance %>
+  <%= link_to "Mostrar", maintenance %>
   </td>
   </tr>
   <% end %>
   </tbody>
+  
 </table>
+  <%= raw pagy_nav(@pagy) %>

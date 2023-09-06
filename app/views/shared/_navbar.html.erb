@@ -7,19 +7,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <%= link_to 'Mantenimientos', maintenances_path, class: 'nav-link' %>          
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+        <%= link_to 'Motores', motors_path, class: 'nav-link' %>
         </li>
-        <li class="nav-item dropdown">
+        <li>
+        <%= link_to 'Términos y condiciones', pages_index_path, class: 'nav-link' %>
+        </li>
+        </ul>
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <% if user_signed_in? %>
         <% if current_user.email %>
             Hola <%= current_user.email %>
         <% end %>
         <% else %>
-        Conectate
+        Conéctate
         <% end %>
           </a>
           <ul class="dropdown-menu">
@@ -31,8 +34,6 @@
         <li><hr class="dropdown-divider"></li>
         <li><%= link_to 'Registro', new_user_registration_path, class: 'dropdown-item'%></li>
         <% end %>
-        </ul>
-      
       
     </div>
   </div>
