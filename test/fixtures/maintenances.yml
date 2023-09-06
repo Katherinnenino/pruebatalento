@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo: MyString
+  name: MyString
+  city: MyString
+  materials: MyString
+  fecha: 2023-09-06
+  operatorname: MyString
+  motor: one
+
+two:
+  tipo: MyString
+  name: MyString
+  city: MyString
+  materials: MyString
+  fecha: 2023-09-06
+  operatorname: MyString
+  motor: two
